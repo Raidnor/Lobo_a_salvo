@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicio">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.lobo_a_salvo.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.example.lobo_a_salvo.inicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_inicio_to_registro"
+            app:destination="@id/registro" />
+    </fragment>
+    <fragment
+        android:id="@+id/registro"
+        android:name="com.example.lobo_a_salvo.Registro"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registro_to_registro_exitoso"
+            app:destination="@id/registro_exitoso" />
+    </fragment>
+    <fragment
+        android:id="@+id/registro_exitoso"
+        android:name="com.example.lobo_a_salvo.Registro_exitoso"
+        android:label="fragment_registro_exitoso"
+        tools:layout="@layout/fragment_registro_exitoso" >
+        <action
+            android:id="@+id/action_registro_exitoso_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/principal"
+        android:name="com.example.lobo_a_salvo.Principal"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principal_to_mapas_servicios"
+            app:destination="@id/mapas_servicios" />
+        <action
+            android:id="@+id/action_principal_to_manuales_de_ayuda"
+            app:destination="@id/manuales_de_ayuda" />
+        <action
+            android:id="@+id/action_principal_to_llamada"
+            app:destination="@id/llamada" />
+        <action
+            android:id="@+id/action_principal_to_perfil"
+            app:destination="@id/perfil" />
+        <action
+            android:id="@+id/action_principal_to_reportar_problema"
+            app:destination="@id/reportar_problema" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapas_servicios"
+        android:name="com.example.lobo_a_salvo.Mapas_servicios"
+        android:label="fragment_mapas_servicios"
+        tools:layout="@layout/fragment_mapas_servicios" />
+    <fragment
+        android:id="@+id/manuales_de_ayuda"
+        android:name="com.example.lobo_a_salvo.Manuales_de_ayuda"
+        android:label="fragment_manuales_de_ayuda"
+        tools:layout="@layout/fragment_manuales_de_ayuda" />
+    <fragment
+        android:id="@+id/llamada"
+        android:name="com.example.lobo_a_salvo.Llamada"
+        android:label="fragment_llamada"
+        tools:layout="@layout/fragment_llamada" />
+    <fragment
+        android:id="@+id/perfil"
+        android:name="com.example.lobo_a_salvo.Perfil"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/reportar_problema"
+        android:name="com.example.lobo_a_salvo.Reportar_problema"
+        android:label="fragment_reportar_problema"
+        tools:layout="@layout/fragment_reportar_problema" />
+</navigation>
