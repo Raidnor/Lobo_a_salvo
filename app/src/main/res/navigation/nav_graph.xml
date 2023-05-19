@@ -41,8 +41,8 @@
         android:label="fragment_registro_exitoso"
         tools:layout="@layout/fragment_registro_exitoso" >
         <action
-            android:id="@+id/action_registro_exitoso_to_inicio"
-            app:destination="@id/inicio" />
+            android:id="@+id/action_registro_exitoso_to_login2"
+            app:destination="@id/login" />
     </fragment>
     <fragment
         android:id="@+id/principal"
@@ -90,4 +90,9 @@
         android:name="com.example.lobo_a_salvo.Reportar_problema"
         android:label="fragment_reportar_problema"
         tools:layout="@layout/fragment_reportar_problema" />
+    <fragment
+        android:id="@+id/frag_div_llamada"
+        android:name="com.example.lobo_a_salvo.frag_div_llamada"
+        android:label="fragment_frag_div_llamada"
+        tools:layout="@layout/fragment_frag_div_llamada" />
 </navigation>

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,12 @@ class Registro : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registro, container, false)
+        val view = inflater.inflate(R.layout.fragment_registro, container, false)
+        val btn_iniciarSesion = view.findViewById<Button>(R.id.btn_ingresar)
+        btn_iniciarSesion.setOnClickListener { v ->
+            view.findNavController().navigate(R.id.action_registro_to_registro_exitoso)
+        }
+        return view
     }
 
     companion object {

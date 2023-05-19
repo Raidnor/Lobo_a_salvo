@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -15,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Registro_exitoso.newInstance] factory method to
+ * Use the [frag_div_llamada.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Registro_exitoso : Fragment() {
+class frag_div_llamada : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,14 +33,9 @@ class Registro_exitoso : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_registro_exitoso, container, false)
-        val btn_inicio = view.findViewById<Button>(R.id.inicio_2)
-        btn_inicio.setOnClickListener { v ->
-            view.findNavController().navigate(R.id.action_registro_exitoso_to_login2)
-        }
-        return view
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_frag_div_llamada, container, false)
     }
-
 
     companion object {
         /**
@@ -51,12 +44,12 @@ class Registro_exitoso : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Registro_exitoso.
+         * @return A new instance of fragment frag_div_llamada.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Registro_exitoso().apply {
+            frag_div_llamada().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
